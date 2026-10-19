@@ -1,0 +1,122 @@
+// queryDSL 추가
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.6'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
+}
+
+group = 'com.paintfinder'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+dependencies {
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
+	implementation 'org.mybatis:mybatis:3.5.11'
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+//	implementation 'io.springfox:springfox-swagger2:2.9.2'
+//	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+
+	// 로컬 실행시 com.amazonaws.SdkClientException: Failed to connect to service endpoint: 에러 발생.
+	// 해결법 -> https://thalals.tistory.com/289
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+	implementation 'org.springframework.cloud:spring-cloud-aws:2.2.1.RELEASE'
+
+	//jpa
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	//JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	//Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+	// queryDSL 추가
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+	annotationProcessor "com.querydsl:querydsl-apt:${queryDslVersion}"
+
+	// 헬스체크 엔드포인트를 위한 acuator
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	// Apache Commons FileUpload (MultipartFile 변환)
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+
+	// Excel 데이터 접근
+	implementation 'org.apache.poi:poi-ooxml:5.2.3'
+
+}
+
+// 쿼리DSL 실행 위한 Q타입 생성
+def querydslDir = "$buildDir/generated/querydsl"
+
+querydsl {
+	jpa = true
+	querydslSourcesDir = querydslDir
+}
+sourceSets {
+	main.java.srcDir querydslDir
+}
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+	querydsl.extendsFrom compileClasspath
+}
+compileQuerydsl {
+	options.annotationProcessorPath = configurations.querydsl
+}
+compileJava {
+	dependsOn compileQuerydsl
+	options.annotationProcessorPath = configurations.querydsl
+}
+
+//작업 정의
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+// 테스트 및 빌드 설정
+test.onlyIf {
+	!project.hasProperty('test')
+}
+
+jar {
+	enabled = false
+}
+//
+//clean {
+//	delete file(querydslDir)
+//}
