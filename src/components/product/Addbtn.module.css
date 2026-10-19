@@ -1,0 +1,33 @@
+.btn_add{
+    background-color: white;
+    border: solid 1px;
+    font-weight:bold;
+    font-size:12px;
+    height:23px;
+    margin: 0;
+    width:47%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_add:hover{
+    background-color: #ddd;
+}
+
+.modal{
+    display:flex;
+    flex-direction: column;
+    top:25%;
+    left:38%;
+    width:300px;
+    height:auto;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    z-index:1;
+    padding: 20px 20px 20px 20px;
+}
+
+.txt_title{
+    margin-bottom:20px;
+}

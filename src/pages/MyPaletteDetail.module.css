@@ -1,0 +1,13 @@
+.wrapper_mypal{
+    width:95%;
+    display:flex;
+    flex-direction: column;
+}
+
+.img_title{
+    margin-right:30px;
+}
+
+.content_mypal{
+    padding-top:30px;
+}

@@ -1,0 +1,99 @@
+.filter_box{
+    display: flex;
+    flex-direction:column;
+    width:170px;
+    font-size: 12px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.cate_filter{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.str_name{
+
+}
+
+.btn_toggle{
+    padding-left:6px;
+    width:15px;
+    cursor:pointer;
+}
+
+.div_checkbox{
+    border-bottom: 1px solid;
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.wrapper_checkbox{
+    width:auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox{
+    flex:0 0 auto;
+    margin-right:0;
+}
+
+.txt_checkbox{
+    flex:1 1 auto;
+    margin-left:0;
+}
+
+.div_range{
+    width:100%;
+    align-items: center;
+}
+
+.input_range{
+    width:30%;
+    height:15px;
+    border-radius: 0;
+    border: solid 1px;
+    margin: 3px 3px 3px 3px;
+    outline:none;
+}
+
+.select_unit{
+    outline:none;
+    border: 0;
+}
+
+.wrapper_range{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper_box{
+    display:flex;
+    flex-direction: row;
+}
+
+.box_setting{
+    border: 1px solid;
+    display : flex;
+    justify-content : center;
+    width:80px;
+    margin:2px;
+    cursor:pointer;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}

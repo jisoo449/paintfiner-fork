@@ -1,0 +1,46 @@
+.wrapper_comments{
+    display:flex;
+    flex-direction:column;
+    margin-top:20px;
+    border-top: 1px solid #000;
+}
+
+.input_comment{
+    border:1px solid gray;
+    display:flex;
+    flex-direction: column;
+}
+
+.nickname{
+    margin-left:10px;
+}
+
+.input_comment input{
+    border:none;
+    outline:none;
+    margin-left:10px;
+}
+
+.limit{
+    margin-left:auto;
+    margin-right:5px;
+    color:rgb(73, 73, 73);
+    font-size:12px;
+}
+
+.holder_btn{
+    border-top:1px solid gainsboro;
+}
+
+.input_comment button{
+    margin-left:auto;
+    width:70px;
+    height:45px;
+    border-radius:0%;
+    border:none;
+    font-weight:bolder;
+}
+
+.list_comments{
+    min-height:50px;
+}

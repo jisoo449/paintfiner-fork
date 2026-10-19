@@ -1,0 +1,7 @@
+.wrap_mypage {
+    display: flex;
+    flex-direction: row;
+    width:95%;
+    min-height: 700px;
+    height: 80vh;
+}

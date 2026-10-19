@@ -1,0 +1,71 @@
+.box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black 1px;
+    margin-top:40px;
+    margin-bottom:50px;
+    width:50%;
+}
+
+.authOptions{
+    display:flex;
+    flex-direction: column;
+    width:58%;
+    justify-content: space-between;
+    height:100px;
+    margin-bottom:40px;
+    font-size:20px;
+}
+
+.oauthbtn_wrapper{
+    display:flex;
+    flex-direction:column;
+    margin-top: 30px;
+}
+
+.oauthbtn_wrapper img{
+    margin-bottom:10px;
+    cursor: pointer;
+}
+
+
+/* 사용자 입력 받는 부분 - LoginInput, JoinInput*/
+.input_wrapper{
+    width:100%;
+    margin-top:20px;
+    margin-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    align-items: center;
+}
+
+.input_cell{
+    width:80%;
+    display:flex;
+    border-bottom: solid black 1px;
+    margin-bottom: 10%;
+}
+
+.label{
+    white-space:nowrap;
+    font-size:20px;
+}
+
+.input{
+    border:0;
+    flex-grow: 1;
+    width:100px;
+    outline:0;
+    font-size:18px;
+}
+
+.authBtn{
+    border: solid black 1px;
+    background-color: white;
+    font-size:20px;
+    padding:5px 10px 5px 10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}

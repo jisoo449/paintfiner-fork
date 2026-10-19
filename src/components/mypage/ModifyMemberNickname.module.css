@@ -1,0 +1,39 @@
+.container_50px{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.container_36px{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 34px;
+}
+
+.nicknameInput {
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #000;
+    width: 250px;
+}
+
+.subText {
+    font-size: 12px;
+    color: #888;
+}
+
+.subText {
+    font-size: 12px;
+    color: #888;
+}
+
+.subTextTrue {
+    font-size: 12px;
+    color: blue;
+}
+
+.subTextFalse{
+    font-size: 12px;
+    color: red;
+}

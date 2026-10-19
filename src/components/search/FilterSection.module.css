@@ -1,0 +1,14 @@
+.filter_wrapper{
+    margin-top:20px;
+}
+.section {
+    width:200px;
+}
+
+.filter_title{
+    width:170px;
+    border-bottom: 1px solid black;
+    font-size:12px;
+    font-weight:bold;
+    padding-bottom:5px;
+}

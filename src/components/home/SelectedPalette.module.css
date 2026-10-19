@@ -1,0 +1,8 @@
+.wrapper_palette{
+    display:flex;
+    flex-direction: column;
+}
+
+.wrapper_palette b{
+    font-size:large;
+}

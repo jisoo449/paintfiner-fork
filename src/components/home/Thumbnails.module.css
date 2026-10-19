@@ -1,0 +1,29 @@
+
+/*그림 썸네일 리스트*/
+.wrapper_thumbs{
+    max-width:1500px;
+    display:flex;
+    flex-direction:column;
+    margin-bottom:0;
+    position:relative;
+    justify-content:center;
+}
+
+.wrapper_artsList{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    gap:0;
+    margin-bottom:10px;
+}
+
+.wrapper_artsList img{
+    max-height:130px;
+    cursor:pointer;
+}
+
+.selected{
+    border: 2px aqua solid;
+}

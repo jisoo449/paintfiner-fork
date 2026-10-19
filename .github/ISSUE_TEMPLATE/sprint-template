@@ -1,0 +1,16 @@
+---
+name: Sprint template
+about: 스프린트 동안의 목표를 적은 템플릿
+title: "Sprint"
+labels: ''
+assignees: jisoo449
+
+---
+
+## 목적 및 상세설명
+
+## 작업 상세 내용
+- [ ] 작업1
+- [ ] 작업2
+
+## 참고 사항

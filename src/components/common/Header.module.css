@@ -1,0 +1,67 @@
+.header {
+  display: grid;
+  width:95%;
+}
+
+.icon_box {
+  display: flex;
+  justify-self: end;
+}
+
+div.icon_box > a {
+  font-size:12px;
+  cursor: pointer;
+  margin:10px;
+  text-decoration: none;
+  color:black;
+  font-weight:bold;
+}
+
+div.icon_box > a.icon_string{
+  font-weight: 400;
+  margin-left:-5px;
+}
+
+.title_box {
+  display: flex;
+  justify-self: center;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  width:100%;
+  align-items: center;
+}
+
+.h1 {
+  font-size:48px;
+  letter-spacing:0;
+  margin:10px 0px 10px 0px;
+}
+
+.search_form {
+  margin-left:auto;
+}
+
+.search_wrapper{
+  margin-left:auto;
+  position:relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search_input {
+  width: 500px;
+  height:35px;
+  padding-left:10px;
+  border: 1px solid rgba(0, 0, 0, 1);
+  font-size:12px;
+  outline:none;
+}
+
+.search_icon {
+  width:19px;
+	height:19px;
+  cursor: pointer;
+  position:absolute;
+  right:2%;
+}

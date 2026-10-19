@@ -1,0 +1,78 @@
+.wrapper{
+    display: flex;
+    width: 40%;
+    min-height: 500px;
+}
+
+.img_preview_queue{
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.img_privew_unit{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.img_privew_unit_selected {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border: 2px solid #666;
+}
+
+.img_privew_unit img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.img_represent {
+    width: 422px;
+    height: 422px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.img_represent img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* 비율 유지하면서 영역 안에 들어오게 */
+    object-position: center;
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .overlayImage {
+    width: 70vw;
+    height: 70vh;
+    min-width: 800px;
+    min-height: 800px;
+    max-width: 1000px;
+    max-height: 800px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 4px;
+  }
