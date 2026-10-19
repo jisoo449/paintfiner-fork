@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
-set -e
-while read -r path repo; do
-  [ -z "$path" ] && continue
-  branch=$(gh repo view "$repo" --json defaultBranchRef -q .defaultBranchRef.name)
-  echo ">>> $repo ($branch) → $path"
-  git subtree add --prefix="$path" "https://github.com/$repo.git" "$branch"
-done <<'EOF'
-paintfiner-be-fork        paint-finder/backend
-paintfinder-fe-fork        paint-finder/webui
-paintfiner-crawler-fork   paint-finder/Crawler
+set -uo pipefail
 
+while read -r path repo branch <&3; do
+  [[ -z "${path:-}" || "$path" == \#* ]] && continue
+
+  if [[ -d "$path" ]]; then
+    echo "--- $path 이미 있음, 건너뜀"; continue
+  fi
+
+  if [[ -z "${branch:-}" ]]; then
+    branch=$(gh repo view "$repo" --json defaultBranchRef -q .defaultBranchRef.name < /dev/null) || {
+      echo "!!! $repo 를 찾을 수 없음, 건너뜀"; continue; }
+  fi
+
+  echo ">>> $repo ($branch) → $path"
+  git subtree add --prefix="$path" "https://github.com/$repo.git" "$branch" < /dev/null \
+    || echo "!!! $repo 가져오기 실패"
+done 3<<'EOF'
+be        paint-finder/backend
+fe        paint-finder/webui
+crawler   paint-finder/Crawler
 EOF
