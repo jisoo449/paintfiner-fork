@@ -1,0 +1,4 @@
+rootProject.name = 'paintfinder'
+include 'build:generated:sources:annotationProcessor:java:main:untitled1'
+findProject(':build:generated:sources:annotationProcessor:java:main:untitled1')?.name = 'untitled1'
+

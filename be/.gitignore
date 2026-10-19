@@ -1,0 +1,56 @@
+/.metadata/
+### STS ###
+.apt_generated
+#.classpath
+.factorypath
+#.project
+#.settings
+.springBeans
+.sts4-cache
+bin/
+build/
+logs/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.class
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+application.yaml
+
+### RunTime ###
+.log
+*.lock
+.lock
+*.bin
+.bin
+.tmp
+
+### Hidden System Files ###
+.DS_Store
+.Thumbs.db
+
+### Compled Codoe ###
+.class
+
+### Secret Key ###
+**/src/main/resources/application_key.properties
