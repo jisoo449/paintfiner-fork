@@ -14,7 +14,7 @@ while read -r path repo branch <&3; do
   fi
 
   echo ">>> $repo ($branch) → $path"
-  git subtree add --prefix="$path" "https://github.com/$repo.git" "$branch" < /dev/null \
+  git subtree add --prefix="$path" "https://github.com/$repo.git" "$branch" --squash < /dev/null \
     || echo "!!! $repo 가져오기 실패"
 done 3<<'EOF'
 be        paint-finder/backend
