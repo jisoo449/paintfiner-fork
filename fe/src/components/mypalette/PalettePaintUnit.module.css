@@ -1,0 +1,158 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left:7px;
+    margin-right:7px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.btn_delete {
+    position: absolute;
+    top:0px;
+    width: 10px; /* 버튼 크기를 아이콘 크기와 동일하게 설정 */
+    height: 10px;
+    border: none;
+    background-color: white;
+    opacity: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 2px;
+    transition: opacity 0.2s ease-in-out;  /* 부드럽게 나타나도록 설정 */
+}
+
+/* 부모 요소인 .imageWrapper에 hover할 때 버튼 나타남 */
+.container:hover .btn_delete {
+    opacity: 40%; /*hover 시 버튼 나타남*/
+}
+
+/* 버튼에 hover하면 완전한 opacity 적용 (우선순위 높이기 위해 .imageWrapper 추가) */
+.container:hover .btn_delete:hover {
+    opacity: 80%;
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 290px;
+    width: 180px;
+    padding: 5px 10px 5px 10px;
+}
+
+.wrapper:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.wrapper:hover .content_paint .btns{
+    box-shadow: none;
+}
+
+.content_paint{
+    display:flex;
+    flex-direction: column;
+    padding:none;
+    width:172px;
+}
+
+.wrap_img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrap_img span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* 넘치는 부분 숨김 */
+}
+
+.productimg{
+    display: block;
+    padding:5px 0 0 0;
+    margin:0 auto;
+    height:150px;
+    width:172px;
+    object-fit: cover;  /* 비율 유지하면서 크롭 */
+    object-position: center; /* 이미지 중앙 정렬 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    transform: scale(1.1); /* 확대 */
+}
+
+.btn_del{
+    position:absolute;
+    top:5px;
+    right:5px;
+    outline: none;
+    background-color: white;
+    border:0;
+}
+
+.txt_product_title{
+    display: flex;
+    flex-direction: column;
+    width:172px;
+    max-height: 45px;
+}
+
+.brand{
+    font-size: 12px;
+    align-items: center;
+    margin-top:5px;
+    margin-bottom:0;
+}
+
+.product_name{
+    font-size: 13px;
+    margin-top:0;  
+    width:172px;
+    white-space: normal;
+    letter-spacing: -0.5px;
+}
+
+.txt_inform{
+    font-size:10px;
+    letter-spacing: -0.5px;
+}
+
+.btns{
+    margin-bottom:10px;
+}   
+
+.div_txt_inform{
+    display:flex;
+    flex-direction:column;
+}
+
+.div_txt_inform_size{
+    display:flex;
+    flex-direction:column;
+    margin-top:5px;
+}
+
+.div_txt_inform_pig{
+    margin-top:-3px;
+    display:flex;
+    flex-direction:column;
+}
+
+.pig_wrapper{
+    display:flex;
+    flex-direction:row;
+    height:15px;
+}
+
+.icon_wrapper{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+}

@@ -1,0 +1,19 @@
+  /* 버튼 영역 */
+.buttonSection {
+    display: flex;
+    gap: 8px;
+}
+
+/* 기본 버튼 스타일 제거 + 텍스트만 보이게 */
+.textButton {
+    background: none;
+    border: none;
+    color: #777; /* 텍스트 색상, 필요시 변경 가능 */
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 20px 0 0;
+}
+
+.textButton:hover {
+    text-decoration: underline;
+}

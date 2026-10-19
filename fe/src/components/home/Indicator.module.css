@@ -1,0 +1,15 @@
+.indicator{
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    transition: left 0.3s ease;
+}
+
+hr{
+    border: 0;
+    height: 1.5px;
+    background: black;
+    margin: 20px 0 0 0;
+}

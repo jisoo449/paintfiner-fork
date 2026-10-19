@@ -1,0 +1,41 @@
+.btn_modal_container{
+    position:relative;
+}
+
+.btn_edit{
+    height:20px;
+    width:55px;
+    margin-top:15px;
+    border:0;
+    background-color: #FFFFFF;
+    cursor:pointer;
+}
+
+.modal_edit{
+    position:fixed;
+    z-index:100;
+    border: 1px solid;
+    position:absolute;
+    left:-85px;
+    margin-top:30px;
+    width:100px;
+    min-height:100px;
+    background-color: #FFFFFF;
+}
+
+td{
+    position:relative;
+    z-index:100;
+    background-color: #FFFFFF;
+    cursor:pointer;
+    /* font-weight:bold; */
+    padding:3px;
+    height: 20px;
+}
+
+td:hover{
+    z-index:0;
+    background-color: blue;
+    color:white;
+    margin:0;
+}

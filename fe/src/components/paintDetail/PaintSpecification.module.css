@@ -1,0 +1,107 @@
+.wrapper{
+    display: flex;
+    width: 60%;
+    min-height: 500px;
+    padding-left: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_brand{
+    font-size: 15px;
+    font-weight: 600;
+    /* letter-spacing: 0.5px; */
+    margin-bottom: 15px;
+}
+
+.text_productName{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wrapper_pigment{
+    gap: 10px;
+    color: #999;
+}
+
+.wrapper_size{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text_paintSize{
+    font-size:12px;
+}
+
+.wrapper_sizeBoxArea{
+    display: flex;
+    gap: 5px;
+    margin-top:5px;
+}
+
+.wrapper_sizeBoxUnit{
+    border: 1px solid #666;
+    padding: 6px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    height: 30px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size:10px;
+}
+
+.selected{
+    border: 2px solid #000;
+    padding: 6px 9px;
+}
+
+.wrapper_spec{
+    margin-top:40px;
+    width: 80%;
+}
+
+.spec_table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.spec_table th,
+.spec_table td {
+    padding: 6px 10px 6px 0px;
+    font-size: 14px;
+    text-align: left;
+    border: none;
+}
+
+.spec_table th{
+    width: 200px;
+}
+
+/* 불필요한 마우스 인터랙션 제거 */
+.spec_table tr:hover,
+.spec_table td:hover,
+.spec_table th:hover {
+    background-color: inherit;
+    color: inherit;
+    cursor: default;
+}
+
+.btn_wrapper {
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.btn_unit {
+    height: 30px;
+    width: 250px;
+}
+  
+.btn_unit > * {
+    height: 100%;
+    width: 100%;
+}

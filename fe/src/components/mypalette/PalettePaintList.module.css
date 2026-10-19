@@ -1,0 +1,68 @@
+/*Search 페이지에서 사용*/
+.product_grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    row-gap: 30px;
+    margin-top:10px;
+    width:100%;
+}
+
+/* Home*/
+.product_row100{
+  position:relative;
+  gap:10px;
+  overflow:auto;
+  white-space: nowrap;
+}
+
+/*MyPal, Compare에서 사용.*/
+/* ✅ 기본적으로 스크롤바 숨김 (스크롤 기능은 유지) */
+.product_scrollable {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;  /* 스크롤 기능은 유지 */
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 10px;
+  padding-bottom: 10px;
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent;  /* 스크롤바 숨김 */
+}
+
+/* ✅ `.wrapper_mypal:hover` 시에만 스크롤바 보이게 설정 */
+.wrapper_mypal:hover .product_scrollable {
+  scrollbar-color: #bbb transparent; /* ✅ hover 시에만 스크롤바 보이게 */
+}
+
+/* ✅ `.product_scrollable`에 마우스를 올려도 스크롤바 유지 */
+.product_scrollable:hover {
+  scrollbar-color: #bbb transparent;
+}
+
+/* ✅ 스크롤바 스타일 - 기본적으로 숨김 */
+.product_scrollable::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* ✅ 스크롤바의 핸들(움직이는 부분)을 기본적으로 투명하게 */
+.product_scrollable::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out; /* 부드러운 전환 */
+}
+
+/* ✅ `wrapper_mypal`에 hover 시 스크롤바 색상 변경 */
+.wrapper_mypal:hover .product_scrollable::-webkit-scrollbar-thumb {
+  background-color: #ccc;  /* hover 시 스크롤바 보이기 */
+}
+
+/* ✅ `.product_scrollable`에 직접 hover해도 스크롤바 유지 */
+.product_scrollable:hover::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+/* ✅ 스크롤 트랙 스타일 */
+.product_scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}

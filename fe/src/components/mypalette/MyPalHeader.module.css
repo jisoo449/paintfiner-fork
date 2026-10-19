@@ -1,0 +1,66 @@
+.title_mypal_detail_pg{
+    width:100%;
+    border-bottom: 2px solid black;
+    font-size:25px;
+    font-weight: 500;
+    margin-top:20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.title_mypal_li_pg{
+    display:flex;
+    justify-content: space-between;
+}
+
+.title_content{
+    display:flex;
+    align-items: center;
+    height:40px;
+}
+
+.input_title{
+    
+}
+
+.btn_toggle{
+    width:55px;
+    height:20px;
+    border:0;
+    border-radius: 15%;
+    font-size: 12px;
+    color: white;
+    font-weight:bold;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.wrapper_btn{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn_cor{
+    border:0;
+    padding:0;
+    height:20px;
+    margin-right:30px;
+    margin-bottom:5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.select_sort{
+    margin-bottom:5px;
+    border:0;
+    outline:none;
+}
+
+.pin_pin{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}

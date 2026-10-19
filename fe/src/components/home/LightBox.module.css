@@ -1,0 +1,10 @@
+.wrapper_lightbox{
+    position:relative;
+}
+
+.art_artist{
+    position:absolute;
+    color:#C9C9C9;
+    top: 3%;
+    right: 2%;
+}

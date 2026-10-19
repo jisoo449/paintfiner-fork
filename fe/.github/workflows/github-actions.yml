@@ -1,0 +1,53 @@
+name: Docker Image CI/CD
+
+# event trigger 
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # .env 파일 만들기
+    - name: make .env file
+      run: | 
+        echo "${{ secrets.ENV_FILE }}" > .env
+
+    # 도커 build & push
+    - name: Docker build & push
+      if: contains(github.ref, 'main') # main 브랜치에 push할 때만 실행
+      run: |
+        docker login -u "${{secrets.DOCKER_USERNAME}}" -p "${{secrets.DOCKER_PASSWORD}}" docker.io
+        docker build -f Dockerfile -t ${{secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_REPO}}:frontend-latest .
+        docker push ${{secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_REPO}}:frontend-latest
+        
+    # 로컬 Docker 이미지 및 빌드 캐시 정리
+    - name: Clean up Docker images locally
+      run: |
+        docker image prune -af
+        docker builder prune -af
+
+      # docker copmose 사용해 이미지 pull 및 실행
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      id: deploy
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd /home/ubuntu
+          docker compose pull app
+          docker compose up -d
+          docker image prune -f
+          docker container prune -f
+          docker volume prune -f
+          docker network prune -f
+          

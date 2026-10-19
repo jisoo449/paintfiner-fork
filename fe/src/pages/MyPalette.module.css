@@ -1,0 +1,40 @@
+.wrap_mypal_pg {
+    display: flex;
+    flex-direction: column;
+    width:95%;
+    min-height: 80vh;
+}
+
+.title_mypal_pg {
+    width: 100%;
+}
+
+/* 기존 팔레트 목록 스타일 유지 */
+.palettes_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Drag & Drop 시 이동할 수 있도록 스타일 조정 */
+.draggable_pal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.draggable_pal:hover,
+.draggable_pal:active {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    opacity: 1;
+}
+
+.draggable_pal:active {
+    cursor: grab;
+}
+
+.draggable_pal:hover {
+    cursor: auto;
+}

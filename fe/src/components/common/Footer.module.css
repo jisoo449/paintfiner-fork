@@ -1,0 +1,39 @@
+.footerwrapper{
+    margin-top: 90px;
+    width:100vw;
+    height: 80px; /* 원하는 높이 지정 */
+    background: #f8f8f8; /* 배경색 지정 (옵션) */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 (옵션) */
+    justify-content: center;
+}
+
+.footer_sections{
+    min-width:1400px;
+    /* min-width:1400px;
+    max-width: 1800px; */
+}
+
+.footer_sections > div {
+    display: flex;
+    justify-content: center;
+}
+
+.brandname{
+    font-size:25px;
+    letter-spacing:0;
+    color: rgb(170, 170, 170);
+}
+
+.section1{
+    margin-left:40px;
+    align-items: center;
+    margin-right:20px;
+}
+
+.section2{
+    width: 33.33%;
+    flex-direction: column; /* 요소들을 세로로 쌓음 */
+    float: right;
+    color:grey;
+    font-size: small;
+}

@@ -1,0 +1,26 @@
+/*Search 페이지에서 사용*/
+.product_grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    row-gap: 30px;
+    margin-top:10px;
+    width:100%;
+}
+
+/*MyPal, Compare에서 사용.*/
+.product_row{
+    position:relative;
+    gap:10px;
+    width:80%;
+    overflow:auto;
+    white-space: nowrap;
+}
+
+/* Home*/
+.product_row100{
+  position:relative;
+  gap:10px;
+  overflow:auto;
+  white-space: nowrap;
+}
